@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <link rel="stylesheet" href="miestilo.css">
+</head>
+<body>
+    
+    <h1><%= titulo %></h1>
+
+    <h2><%= contenido %></h2>
+
+    <table id="mitabla">
+        <thead>
+            <tr>
+                <th><%= titulodato1%></th>
+                <th><%= titulodato2%></th>
+                <th><%= titulodato3%></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <!-- <%  for (let registro in  datostabla) { %>
+
+            <tr>
+                <td><%= datostabla[registro].dato1 %></td>
+                <td><%= datostabla[registro].dato2 %></td>
+                <td><%= datostabla[registro].dato3 %></td>
+            </tr>
+
+        <% } %> -->
+
+
+        <%  for (let registro of  datostabla) { %>
+
+            <tr>
+                <td><%= registro.dato1 %></td>
+                <td><%= registro.dato2 %></td>
+                <td><%= registro.dato3 %></td>
+            </tr>
+
+        <% } %>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
